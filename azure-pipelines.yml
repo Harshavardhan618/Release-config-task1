@@ -23,9 +23,9 @@ steps:
 
 - script: |
 
-      for scriptNumber in {1..5}; do
-        echo "Executing PythonScript_${scriptNumber} in $configFolder"
-        python RELEASE_CONFIGURATIONS/$configFolder/PythonScript_${scriptNumber}.py
+      for PythonScript in {1..5}; do
+        echo "Executing PythonScript_${PythonScript} in $configFolder"
+        python RELEASE_CONFIGURATIONS/$configFolder/PythonScript_${PythonScript}.py
       done
 
 - script: |
