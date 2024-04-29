@@ -12,11 +12,11 @@ steps:
 
 - script: |
 
-    python $(CONFIG1)/PythonScript1.py
-    python $(CONFIG1)/PythonScript2.py
-    python $(CONFIG1)/PythonScript3.py
-    python $(CONFIG1)/PythonScript4.py
-    python $(CONFIG1)/PythonScript5.py
+    python ./PythonScript1.py
+    python ./PythonScript2.py
+    python ./PythonScript3.py
+    python ./PythonScript4.py
+    python ./PythonScript5.py
 
 
 - script: |
