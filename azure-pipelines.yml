@@ -1,15 +1,30 @@
 
+
 trigger:
-- main
+- main  # Define the branch to trigger the pipeline on, e.g., 'main' or 'master'
 
 pool:
-  name: Default
+  name: Default  # Define the VM image to use for the build environment
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.11'
+    addToPath: true
+    architecture: 'x64'
+
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+       python -m pip install --upgrade pip  # Ensure pip is up-to-date
+       pip install -r requirements.txt  # Install dependencies
+        displayName: 'Install dependencies'
+
+- script: |
+    for folder in RELEASE_CONFIGURATIONS/*; do
+        echo "Processing scripts in $folder"
+        for script in $folder/*.py; do
+            echo "Running $script"
+            python $script
+        done
+    done
+  displayName: 'Run Python scripts'
