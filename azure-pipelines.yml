@@ -21,12 +21,12 @@ steps:
   displayName: 'Check Python Version'
 
 - script: |
-      for config_value in config1 config2 config3 config4 config5; do
-        if [ "$(config)" == "$config_value" ]; then
-          python "python${config_value: -1}.py"
-          break
-        fi
-      done
+      if [ "$(config)" == "config1" ]; then
+        python PythonScript1.py
+        python PythonScript2.py
+        python PythonScript3.py
+        python PythonScript4.py
+        python PythonScript5.py
 
 
 
