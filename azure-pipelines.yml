@@ -12,7 +12,7 @@ steps:
   displayName: 'Check Python Version'
 
 - script: |
-      if [ "$(config)" == "config1" ]; then
+      if [ "$(config)" == "$(config1)" ]; then
         for script in config1/*.py; do
           python "$script"
         done
