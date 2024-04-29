@@ -21,7 +21,7 @@ steps:
   displayName: 'Check Python Version'
 
 - script: |
-      if [ "$(config1)" == "RELEASE_CONFIGURATIONS/Config_1/" ]; then
+      if [ "$(config1)" == "RELEASE_CONFIGURATIONS/Config_1" ]; then
         python PythonScript1.py
         python PythonScript2.py
         python PythonScript3.py
