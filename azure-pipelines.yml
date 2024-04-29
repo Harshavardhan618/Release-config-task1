@@ -20,13 +20,16 @@ steps:
     python --version
   displayName: 'Check Python Version'
 
-- script: |
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
       if [ "$(config)" == "Config1" ]; then
-        python PythonScript1.py
-        python PythonScript2.py
-        python PythonScript3.py
-        python PythonScript4.py
-        python PythonScript5.py
+              python PythonScript1.py
+              python PythonScript2.py
+              python PythonScript3.py
+              python PythonScript4.py
+              python PythonScript5.py
 
 
 
