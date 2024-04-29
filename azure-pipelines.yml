@@ -1,4 +1,11 @@
-
+variables:
+  - name: Config
+    value: |
+      RELEASE_CONFIGURATIONS/Config_1/
+      RELEASE_CONFIGURATIONS/Config_2/
+      RELEASE_CONFIGURATIONS/Config_3/
+      RELEASE_CONFIGURATIONS/Config_4/
+      RELEASE_CONFIGURATIONS/Config_5/
 
 trigger:
 - main 
@@ -12,6 +19,13 @@ steps:
     python --version
   displayName: 'Check Python Version'
 
+- script: |
+
+   IFS=$'\n' read -rd '' -a folderPaths <<< "${{ variables.Config }}"
+    for folderPath in "${folderPaths[@]}"; do
+      echo "Processing folder: $folderPath"
+      # Run your tasks for each folder here
+    done
 
 
 
