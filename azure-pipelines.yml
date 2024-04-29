@@ -20,9 +20,14 @@ steps:
     python --version
   displayName: 'Check Python Version'
 
-- script: echo "Executing script for config1"
-  displayName: 
-  condition: eq(variables['config'], 'config1')
+- script: |
+      if [ "$(config1)" == "RELEASE_CONFIGURATIONS/Config_1/" ]; then
+        python PythonScript1.py
+        python PythonScript2.py
+        python PythonScript3.py
+        python PythonScript4.py
+        python PythonScript5.py
+       
 
 
 
