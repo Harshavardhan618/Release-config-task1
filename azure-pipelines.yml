@@ -16,4 +16,4 @@ steps:
 
 
 - script: |
-    python RELEASE_CONFIGURATIONS/Config_1/PythonScript1_config1.py
+    python RELEASE_CONFIGURATIONS/Config_1/PythonScript2_config1.py
