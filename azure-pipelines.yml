@@ -12,6 +12,7 @@ steps:
   displayName: 'Check Python Version'
 
 - script: |
+  displayName: Config 1
     python $(CONFIG1)/PythonScript1.py
     python $(CONFIG1)/PythonScript2.py
     python $(CONFIG1)/PythonScript3.py
@@ -19,6 +20,7 @@ steps:
     python $(CONFIG1)/PythonScript5.py
 
 - script: |
+  displayName: Config 2
     python $(CONFIG2)/PythonScript1_config2.py
     python $(CONFIG2)/PythonScript2_config2.py
     python $(CONFIG2)/PythonScript3_config2.py
@@ -26,6 +28,7 @@ steps:
     python $(CONFIG2)/PythonScript5_config2.py
 
 - script: |
+  displayName: Config 3
     python $(CONFIG3)/PythonScript1_config3.py
     python $(CONFIG3)/PythonScript2_config3.py
     python $(CONFIG3)/PythonScript3_config3.py
@@ -33,6 +36,7 @@ steps:
     python $(CONFIG3)/PythonScript5_config3.py
 
 - script: |
+  displayName: Config 4
     python $(CONFIG4)/PythonScript1_config4.py
     python $(CONFIG4)/PythonScript2_config4.py
     python $(CONFIG4)/PythonScript3_config4.py
@@ -40,6 +44,7 @@ steps:
     python $(CONFIG4)/PythonScript5_config4.py
 
 - script: |
+  displayName: Config 5
     python $(CONFIG5)/PythonScript1_config5.py
     python $(CONFIG5)/PythonScript2_config5.py
     python $(CONFIG5)/PythonScript3_config5.py
