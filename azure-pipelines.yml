@@ -20,17 +20,19 @@ steps:
     python --version
   displayName: 'Check Python Version'
 
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      for config_value in config1 config2 config3 config4 config5; do
+              if [ "$(config)" == "$config_value" ]; then
+                python "python${config_value: -1}.py"
+                break
+              fi
+            done
 
-- script: |
 
-    if [ "${{ variables.config }}" == "$(Config1)" ]; then
-      for scriptNumber in {1..5}; do
-        echo "Executing PythonScript_${scriptNumber} in ${variables.config}"
-        python RELEASE_CONFIGURATIONS/${variables.config}/PythonScript_${scriptNumber}.py
-      done
-    else
-      echo "Config is not config1, skipping Python script execution."
-    fi
+
 
 - script: |
     python $(CONFIG1)/PythonScript1.py
