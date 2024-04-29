@@ -8,7 +8,7 @@ pool:
 
 steps:
 - checkout: self
-  path: RELEASE_CONFIGURATIONS/Config_1 # Checkout config1 directory from the repository
+  path: RELEASE_CONFIGURATIONS/Config_2 # Checkout config1 directory from the repository
 
 
 - script: |
