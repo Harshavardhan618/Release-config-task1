@@ -22,10 +22,11 @@ steps:
 
 - script: |
 
-    IFS=$'\n' read -rd '' -a folderPaths <<< "${{ variables.Config }}"
-    for folderPath in "${folderPaths[@]}"; do
-      echo "Processing folder: $folderPath"
-      python "$folderPath/PythonScript1.py"  # Replace PythonScript1.py with your Python script filename
+    i=1
+    while [ $i -le 5 ]; do  # Change 5 to the number of scripts you want to execute
+      echo "Executing PythonScript_$i.py"
+      python RELEASE_CONFIGURATIONS/Config_$i/PythonScript_$i.py
+      i=$((i+1))
     done
 
 
