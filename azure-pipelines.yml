@@ -14,12 +14,7 @@ steps:
 
 
 
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.11.9'
-    githubToken: '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'
-    addToPath: true
-    architecture: 'x64'
+
 - script: |
     python PythonScript1_config1.py  # Replace 'YourPythonScript.py' with the name of your Python script
   displayName: 'Run Python script'
