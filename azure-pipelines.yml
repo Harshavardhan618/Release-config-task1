@@ -12,6 +12,24 @@ steps:
   displayName: 'Check Python Version'
 
 - script: |
+      if [ "$(config)" == "config1" ]; then
+        for script in config1/*.py; do
+          python "$script"
+        done
+      elif [ "$(config)" == "config2" ]; then
+        for script in config2/*.py; do
+          python "$script"
+        done
+      elif [ "$(config)" == "config3" ]; then
+        for script in config3/*.py; do
+          python "$script"
+        done
+      else
+        echo "Invalid config specified"
+        exit 1
+      fi
+
+- script: |
     python $(CONFIG1)/PythonScript1.py
     python $(CONFIG1)/PythonScript2.py
     python $(CONFIG1)/PythonScript3.py
