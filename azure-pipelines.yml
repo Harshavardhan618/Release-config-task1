@@ -45,6 +45,12 @@ steps:
     python $(CONFIG5)/PythonScript3_config5.py
     python $(CONFIG5)/PythonScript4_config5.py
     python $(CONFIG5)/PythonScript5_config5.py
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
        
 
 
