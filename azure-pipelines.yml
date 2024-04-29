@@ -7,13 +7,13 @@ pool:
   name: Default 
 
 variables:
-  - name: Config
+  - name: Configuration 
     value: |
-      RELEASE_CONFIGURATIONS/Config_1/
-      RELEASE_CONFIGURATIONS/Config_2/
-      RELEASE_CONFIGURATIONS/Config_3/
-      RELEASE_CONFIGURATIONS/Config_4/
-      RELEASE_CONFIGURATIONS/Config_5/
+     Config1
+     Config2
+     Config3
+     Config4
+     Config5
 
 steps:
 - script: |
@@ -21,7 +21,15 @@ steps:
   displayName: 'Check Python Version'
 
 
-
+- script: |
+    IFS=$'\n' read -rd '' -a configs <<< "${Configurations}"
+    for configFolder in "${configs[@]}"; do
+      echo "Processing configuration folder: $configFolder"
+      for scriptNumber in {1..5}; do
+        echo "Executing PythonScript_${scriptNumber} in $configFolder"
+        python RELEASE_CONFIGURATIONS/$configFolder/PythonScript_${scriptNumber}.py
+      done
+    done
 
 - script: |
     python $(CONFIG1)/PythonScript1.py
