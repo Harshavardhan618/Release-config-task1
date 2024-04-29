@@ -9,6 +9,14 @@ pool:
 steps:
 
 - script: |
+      for config_folder in config1 config2 config3 config4 config5; do
+        echo "Executing scripts in $config_folder"
+        for script in $config_folder/*.py; do
+          python "$script"
+        done
+      done
+
+- script: |
     python $(CONFIG1)/PythonScript1.py
     python $(CONFIG1)/PythonScript2.py
     python $(CONFIG1)/PythonScript3.py
