@@ -13,6 +13,12 @@ steps:
   displayName: 'Check Python Version'
 
 
+
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'  # Specify the Python version you want to use
+    addToPath: true
+
 - script: |
     python PythonScript1_config1.py  # Replace 'YourPythonScript.py' with the name of your Python script
   displayName: 'Run Python script'
