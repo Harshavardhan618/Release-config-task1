@@ -7,27 +7,14 @@ pool:
   name: Default 
 
 steps:
-- script: |
-    python --version
-  displayName: 'Check Python Version'
+- checkout: self
+  path: ./Config_1 # Checkout config1 directory from the repository
 
 - script: |
-      if [ "$(config)" -eq "$(config1)" ]; then
-        for script in config1/*.py; do
-          python "$script"
-        done
-      elif [ "$(config)" == "config2" ]; then
-        for script in config2/*.py; do
-          python "$script"
-        done
-      elif [ "$(config)" == "config3" ]; then
-        for script in config3/*.py; do
-          python "$script"
-        done
-      else
-        echo "Invalid config specified"
-        exit 1
-      fi
+      for script in config1/*.py; do
+        python "$script"
+      done
+
 
 - script: |
     python $(CONFIG1)/PythonScript1.py
