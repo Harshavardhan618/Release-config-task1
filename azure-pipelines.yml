@@ -8,7 +8,6 @@ pool:
 
 steps:
 
-
 - script: |
     python $(CONFIG1)/PythonScript1.py
     python $(CONFIG1)/PythonScript2.py
@@ -46,7 +45,6 @@ steps:
  
        
  
-has context menu
 
        
 
