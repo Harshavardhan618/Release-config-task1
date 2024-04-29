@@ -1,3 +1,11 @@
+
+
+trigger:
+- main 
+
+pool:
+  name: Default 
+
 variables:
   - name: Config
     value: |
@@ -7,14 +15,7 @@ variables:
       RELEASE_CONFIGURATIONS/Config_4/
       RELEASE_CONFIGURATIONS/Config_5/
 
-trigger:
-- main 
-
-pool:
-  name: Default 
-
 steps:
-
 - script: |
     python --version
   displayName: 'Check Python Version'
