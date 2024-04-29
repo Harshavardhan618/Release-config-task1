@@ -1,10 +1,10 @@
 
 
 trigger:
-- main  # Define the branch to trigger the pipeline on, e.g., 'main' or 'master'
+- main 
 
 pool:
-  name: Default  # Define the VM image to use for the build environment
+  name: Default 
 
 steps:
 
@@ -16,4 +16,8 @@ steps:
 
 
 - script: |
+    python RELEASE_CONFIGURATIONS/Config_1/PythonScript1_config1.py
     python RELEASE_CONFIGURATIONS/Config_1/PythonScript2_config1.py
+    python RELEASE_CONFIGURATIONS/Config_1/PythonScript3_config1.py
+    python RELEASE_CONFIGURATIONS/Config_1/PythonScript4_config1.py
+    python RELEASE_CONFIGURATIONS/Config_1/PythonScript5_config1.py
