@@ -23,7 +23,7 @@ steps:
 
 - script: |
 
-    if [ "${{ variables.config }}" == "config1" ]; then
+    if [ "${{ variables.config }}" == "$(Config1)" ]; then
       for scriptNumber in {1..5}; do
         echo "Executing PythonScript_${scriptNumber} in ${variables.config}"
         python RELEASE_CONFIGURATIONS/${variables.config}/PythonScript_${scriptNumber}.py
