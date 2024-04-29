@@ -20,14 +20,6 @@ steps:
     python --version
   displayName: 'Check Python Version'
 
-- script: |
-
-    i=PythonScript1_config1.py
-    while [ $i -le PythonScript5 ]; do  # Change 5 to the number of scripts you want to execute
-      echo "Executing PythonScript_$i.py"
-      python RELEASE_CONFIGURATIONS/Config_$i/PythonScript_$i.py
-      i=$((i+1))
-    done
 
 
 
