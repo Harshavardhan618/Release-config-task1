@@ -22,14 +22,11 @@ steps:
 
 
 - script: |
-    IFS=$'\n' read -rd '' -a configs <<< "${Configurations}"
-    for configFolder in "${configs[@]}"; do
-      echo "Processing configuration folder: $configFolder"
+
       for scriptNumber in {1..5}; do
         echo "Executing PythonScript_${scriptNumber} in $configFolder"
         python RELEASE_CONFIGURATIONS/$configFolder/PythonScript_${scriptNumber}.py
       done
-    done
 
 - script: |
     python $(CONFIG1)/PythonScript1.py
