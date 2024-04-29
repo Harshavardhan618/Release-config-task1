@@ -16,8 +16,10 @@ steps:
 
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '3.x'  # Specify the Python version you want to use
+    versionSpec: '3.11.9'
+    disableDownloadFromRegistry: true
     addToPath: true
+    architecture: 'x64'
 
 - script: |
     python PythonScript1_config1.py  # Replace 'YourPythonScript.py' with the name of your Python script
