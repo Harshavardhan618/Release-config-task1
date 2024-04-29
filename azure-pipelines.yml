@@ -21,10 +21,10 @@ steps:
 
 - script: |
 
-   IFS=$'\n' read -rd '' -a folderPaths <<< "${{ variables.Config }}"
+    IFS=$'\n' read -rd '' -a folderPaths <<< "${{ variables.Config }}"
     for folderPath in "${folderPaths[@]}"; do
       echo "Processing folder: $folderPath"
-      # Run your tasks for each folder here
+      python "$folderPath/PythonScript1.py"  # Replace PythonScript1.py with your Python script filename
     done
 
 
