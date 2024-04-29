@@ -11,9 +11,12 @@ steps:
   path: ./Config_1 # Checkout config1 directory from the repository
 
 - script: |
-      for script in config1/*.py; do
-        python "$script"
-      done
+
+    python $(CONFIG1)/PythonScript1.py
+    python $(CONFIG1)/PythonScript2.py
+    python $(CONFIG1)/PythonScript3.py
+    python $(CONFIG1)/PythonScript4.py
+    python $(CONFIG1)/PythonScript5.py
 
 
 - script: |
