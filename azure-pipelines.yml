@@ -11,6 +11,12 @@ steps:
   
     python RELEASE_CONFIGURATIONS/initial_file.py
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
 
 - task: PublishPipelineArtifact@1
   inputs:
