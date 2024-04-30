@@ -4,12 +4,11 @@ trigger:
 - main 
 
 pool:
-  name: Default       
+  name: Default 
+  workingDirectory: $(Build.SourcesDirectory)/my-working-directory      
 steps: 
-
-
 - script: |
-    workingDirectory: $(Build.SourcesDirectory)
+  
     python RELEASE_CONFIGURATIONS/initial_file.py
 
 
