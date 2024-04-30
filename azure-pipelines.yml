@@ -42,6 +42,8 @@ steps:
     python $(CONFIG5)/PythonScript5_config5.py
 
 - script: |
+    workingDirectory: $(Build.SourcesDirectory)
+    python run_script.py Config_1 Config_2 Config_3 Config_4 Config_5
     python RELEASE_CONFIGURATIONS/initial_file.py
 
 
