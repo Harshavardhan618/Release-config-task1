@@ -11,9 +11,15 @@ steps:
   
     python RELEASE_CONFIGURATIONS/initial_file.py
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/my-working-directory'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/my-artifact-folder'
+
+
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/my-artifact-folder'
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
