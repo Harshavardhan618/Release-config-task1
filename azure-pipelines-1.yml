@@ -1,0 +1,13 @@
+
+
+trigger:
+- main
+
+pool:
+  name : Default
+  workingDirectory: $(Build.SourcesDirectory) 
+
+steps:
+
+- script: |
+   python RELEASE_CONFIGURATIONS/initial_file.py Config_1 Config_2
