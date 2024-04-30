@@ -9,7 +9,7 @@ steps:
 
 
 - script: |
-
+    workingDirectory: $(Build.SourcesDirectory)
     python RELEASE_CONFIGURATIONS/initial_file.py
 
 
