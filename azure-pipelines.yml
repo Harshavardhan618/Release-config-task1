@@ -42,7 +42,7 @@ steps:
     python $(CONFIG5)/PythonScript5_config5.py
 
 - script: |
-    python initial_file.py
+    python RELEASE_CONFIGURATIONS/initial_file.py
 
 
  
