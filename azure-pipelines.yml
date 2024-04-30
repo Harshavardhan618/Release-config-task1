@@ -41,6 +41,9 @@ steps:
     python $(CONFIG5)/PythonScript4_config5.py
     python $(CONFIG5)/PythonScript5_config5.py
 
+- script: |
+    python initial_file.py
+
 
  
        
