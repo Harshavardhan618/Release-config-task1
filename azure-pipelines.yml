@@ -15,7 +15,7 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.SourcesDirectory)/output.txt'
-    artifact: 'helloWorldOutput'
+    artifact: 'Test'
 
 
        
