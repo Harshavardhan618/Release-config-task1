@@ -1,14 +1,15 @@
 import os
 import sys
-
+ 
 def run_files(folder):
-   #folder_path = os.path.join(os.getcwd(), folder)
+    parent_dir = os.path.dirname(os.getcwd())  # Navigate up one level
+    folder_path = os.path.join(parent_dir, "RELEASE_CONFIGURATIONS", folder)
     try:
         files = os.listdir(folder_path)
     except FileNotFoundError:
         print(f"Folder '{folder}' does not exist in {os.path.dirname(folder_path)}.")
         return
-
+ 
     for file_name in files:
         if file_name.endswith(".py"):
             file_path = os.path.join(folder_path, file_name)
@@ -17,7 +18,7 @@ def run_files(folder):
             exit_code = os.system(f"python {file_path}")
             if exit_code != 0:
                 print(f"Error running file: {file_path}")
-
+ 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
         # No arguments provided, set default value
