@@ -9,7 +9,7 @@ pool:
 steps: 
 - script: |
   
-    python RELEASE_CONFIGURATIONS/initial_file.py
+    python RELEASE_CONFIGURATIONS/initial_file.py Config_1 Config_2
 
 
  
