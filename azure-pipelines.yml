@@ -9,8 +9,7 @@ steps:
 
 
 - script: |
-    workingDirectory: $(Build.SourcesDirectory)
-    python run_script.py $(CONFIG1) $(CONFIG2) $(CONFIG3) $(CONFIG4) $(CONFIG5)
+
     python RELEASE_CONFIGURATIONS/initial_file.py
 
 
