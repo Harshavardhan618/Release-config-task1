@@ -7,18 +7,18 @@ pool:
   name: Default       
 steps: 
 - script: |
-    python $(CONFIG1)/PythonScript1.py
-    python $(CONFIG1)/PythonScript2.py
-    python $(CONFIG1)/PythonScript3.py
-    python $(CONFIG1)/PythonScript4.py
-    python $(CONFIG1)/PythonScript5.py
+    python $(CONFIG1)/PythonScript1_config1.py
+    python $(CONFIG1)/PythonScript2_config1.py
+    python $(CONFIG1)/PythonScript3_config1.py
+    python $(CONFIG1)/PythonScript4_config1.py
+    python $(CONFIG1)/PythonScript5_config1.py
  
 - script: |
-    python $(CONFIG2)/PythonScript1.py
-    python $(CONFIG2)/PythonScript2.py
-    python $(CONFIG2)/PythonScript3.py
-    python $(CONFIG2)/PythonScript4.py
-    python $(CONFIG2)/PythonScript5.py
+    python $(CONFIG2)/PythonScript1_config2.py
+    python $(CONFIG2)/PythonScript2_config2.py
+    python $(CONFIG2)/PythonScript3_config2.py
+    python $(CONFIG2)/PythonScript4_config2.py
+    python $(CONFIG2)/PythonScript5_config2.py
  
 - script: |
     python $(CONFIG3)/PythonScript1_config3.py
