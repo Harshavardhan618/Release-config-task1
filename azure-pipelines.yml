@@ -10,6 +10,11 @@ steps:
 - script: |
   
     python RELEASE_CONFIGURATIONS/initial_file.py > output.txt
+    python RELEASE_CONFIGURATIONS/initial_file.py config_1 > Config_1.txt
+    python RELEASE_CONFIGURATIONS/initial_file.py config_2 > Config_2.txt
+    python RELEASE_CONFIGURATIONS/initial_file.py config_3 > Config_3.txt
+    python RELEASE_CONFIGURATIONS/initial_file.py config_4 > Config_4.txt
+    python RELEASE_CONFIGURATIONS/initial_file.py config_5 > Config_5.txt
 
 - task: CopyFiles@2
   inputs:
