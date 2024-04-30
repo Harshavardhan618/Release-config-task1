@@ -1,8 +1,9 @@
+[15:17] Deshmukh, Ashwini
 import os
 import sys
  
 def run_files(folder):
-    parent_dir = os.path.dirname(os.getcwd())  # Navigate up one level
+    parent_dir = os.getcwd()  # Navigate up two levels
     folder_path = os.path.join(parent_dir, "RELEASE_CONFIGURATIONS", folder)
     try:
         files = os.listdir(folder_path)
@@ -13,7 +14,7 @@ def run_files(folder):
     for file_name in files:
         if file_name.endswith(".py"):
             file_path = os.path.join(folder_path, file_name)
-            print('---------------------------------------------------------')
+            #print('---------------------------------------------------------')
             # Execute the Python file
             exit_code = os.system(f"python {file_path}")
             if exit_code != 0:
