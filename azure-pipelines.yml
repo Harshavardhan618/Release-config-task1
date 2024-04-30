@@ -5,7 +5,7 @@ trigger:
 
 pool:
   name: Default 
-  workingDirectory: $(Build.SourcesDirectory)/my-working-directory      
+  workingDirectory: $(Build.SourcesDirectory)/      
 steps: 
 - script: |
   
