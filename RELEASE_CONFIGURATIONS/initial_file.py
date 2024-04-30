@@ -1,4 +1,3 @@
-[15:17] Deshmukh, Ashwini
 import os
 import sys
  
