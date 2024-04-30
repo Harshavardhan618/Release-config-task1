@@ -2,7 +2,7 @@ import os
 import sys
 
 def run_files(folder):
-    folder_path = os.path.join(os.getcwd(), folder)
+   #folder_path = os.path.join(os.getcwd(), folder)
     try:
         files = os.listdir(folder_path)
     except FileNotFoundError:
