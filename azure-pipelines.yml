@@ -9,12 +9,12 @@ pool:
 steps: 
 - script: |
   
-    python RELEASE_CONFIGURATIONS/initial_file.py > output.txt
+    python RELEASE_CONFIGURATIONS/initial_file.py
 
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Build.SourcesDirectory)/output.txt'
+    targetPath: '$(Build.SourcesDirectory)'
     artifact: 'Test'
 
 
