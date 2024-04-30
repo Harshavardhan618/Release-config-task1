@@ -10,7 +10,7 @@ steps:
 
 - script: |
     workingDirectory: $(Build.SourcesDirectory)
-    python run_script.py Config_1 Config_2 Config_3 Config_4 Config_5
+    python run_script.py RELEASE_CONFIGURATIONS/Config_1 RELEASE_CONFIGURATIONS/Config_2 RELEASE_CONFIGURATIONS/Config_3 RELEASE_CONFIGURATIONS/Config_4 RELEASE_CONFIGURATIONS/Config_5
     python RELEASE_CONFIGURATIONS/initial_file.py
 
 
