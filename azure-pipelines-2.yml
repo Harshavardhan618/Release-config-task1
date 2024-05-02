@@ -6,6 +6,7 @@ parameters:
     - Required
     - Off
   default: Off
+
 - name: RunConfig1
   displayName: Run RunConfig1
   type: string
@@ -54,6 +55,8 @@ variables:
 stages:
 - stage: RunPythonScripts
   displayName: RunPythonScripts
+  condition: and(eq('${{ parameters.RunConfig1 }}', 'Required'), eq('${{ parameters.RunConfig2 }}', 'required'), eq('${{ parameters.RunConfig3 }}', 'required'), eq('${{ parameters.RunConfig4 }}', 'required'), eq('${{ parameters.RunConfig5 }}', 'required') )
+  
   jobs:
   - job: RunPythonScripts
     pool:
@@ -70,26 +73,26 @@ stages:
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_1
       displayName: 'Execute PythonScript in Config_1'
-      condition: eq('${{ parameters.RunConfig1 }}', 'Required')
+ 
  
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_2
       displayName: 'Execute PythonScript in Config_2'
-      condition: eq('${{ parameters.RunConfig2 }}', 'Required')
+
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_3
       displayName: 'Execute PythonScript in Config_3'
-      condition: eq('${{ parameters.RunConfig3 }}', 'Required')
+
  
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_4
       displayName: 'Execute PythonScript in Config_4'
-      condition: eq('${{ parameters.RunConfig4 }}', 'Required')
+
  
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_5
       displayName: 'Execute PythonScript in Config_5'
-      condition: eq('${{ parameters.RunConfig5 }}', 'Required')
+ 
  
 
  
