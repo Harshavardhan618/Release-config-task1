@@ -60,6 +60,7 @@ stages:
     # Run initial_file.py with specified arguments
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py
+        
  
 
     - script: |
