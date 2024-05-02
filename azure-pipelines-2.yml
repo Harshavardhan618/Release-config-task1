@@ -21,7 +21,7 @@ parameters:
     - Off
   default: Off
 - name: RunConfig3
-  displayName: Run RunConfig3
+  displayName: Run RunConfig3 
   type: string
   values:
     - Required
