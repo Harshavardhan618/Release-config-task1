@@ -56,10 +56,6 @@ stages:
     pool:
       Default
     steps:
-    - task: UsePythonVersion@0
-      inputs:
-        versionSpec: '3.11'
-        addToPath: true
  
     # Run initial_file.py with specified arguments
     - script: |
