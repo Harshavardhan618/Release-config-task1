@@ -1,0 +1,89 @@
+parameters:
+- name: RunPythonScripts
+  displayName: Run RunPythonScripts
+  type: string
+  values:
+    - Required
+    - Off
+  default: Off
+- name: RunConfig1
+  displayName: Run RunConfig1
+  type: string
+  values:
+    - Required
+    - Off
+  default: Off
+- name: RunConfig2
+  displayName: Run RunConfig2
+  type: string
+  values:
+    - Required
+    - Off
+  default: Off
+- name: RunConfig3
+  displayName: Run RunConfig3
+  type: string
+  values:
+    - Required
+    - Off
+  default: Off
+- name: RunConfig4
+  displayName: Run RunConfig4
+  type: string
+  values:
+    - Required
+    - Off
+  default: Off
+- name: RunConfig5
+  displayName: Run RunConfig5
+  type: string
+  values:
+    - Required
+    - Off
+  default: Off
+ 
+trigger:
+      - main
+ 
+pool:
+  name : Default
+ 
+stages:
+- stage: RunPythonScripts
+  displayName: RunPythonScripts
+  jobs:
+  - job: RunPythonScripts
+    pool:
+      Default
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '3.11'
+        addToPath: true
+ 
+    # Run initial_file.py with specified arguments
+    - script: |
+        python RELEASE_CONFIGURATIONS/initial_file.py
+ 
+
+    - script: |
+        python RELEASE_CONFIGURATIONS/initial_file.py Config_1
+      displayName: 'Execute PythonScript in Config_1'
+ 
+    - script: |
+        python RELEASE_CONFIGURATIONS/initial_file.py Config_2
+      displayName: 'Execute PythonScript in Config_2'
+
+    - script: |
+        python RELEASE_CONFIGURATIONS/initial_file.py Config_3
+      displayName: 'Execute PythonScript in Config_3'
+ 
+    - script: |
+        python RELEASE_CONFIGURATIONS/initial_file.py Config_4
+      displayName: 'Execute PythonScript in Config_4'
+ 
+    - script: |
+        python RELEASE_CONFIGURATIONS/initial_file.py Config_5
+      displayName: 'Execute PythonScript in Config_5'
+ 
+
