@@ -15,7 +15,7 @@ steps:
     python RELEASE_CONFIGURATIONS/initial_file.py config_3 > Config_3.txt
     python RELEASE_CONFIGURATIONS/initial_file.py config_4 > Config_4.txt
     python RELEASE_CONFIGURATIONS/initial_file.py config_5 > Config_5.txt
-    python RELEASE_CONFIGURATIONS/initial_file.py config_5 config 3 > Config_7.txt
+    python RELEASE_CONFIGURATIONS/initial_file.py config_5 config_3 > Config_7.txt
 
 - task: CopyFiles@2
   inputs:
