@@ -96,8 +96,8 @@ stages:
       condition: eq('${{ parameters.RunConfig4 }}', 'Required')
 
   - job: RunConfig5
-    #dependsOn: RunConfig3
-    #condition: succeeded('RunConfig3')
+    dependsOn: RunConfig3
+    condition: succeeded('RunConfig3')
     steps:
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_5
