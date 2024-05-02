@@ -39,7 +39,7 @@ steps:
     targetType: 'inline'
     script: |
       Write-Host "Contents of the file:"
-      Get-Content C:/agent1/_work/3/Config_1
+      Get-Content C:/agent1/_work/3/Config_1.txt
     
 
 
