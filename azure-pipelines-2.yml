@@ -12,35 +12,35 @@ parameters:
   values:
     - Required
     - Off
-  default: Off
+  default: Required
 - name: RunConfig2
   displayName: Run RunConfig2
   type: string
   values:
     - Required
     - Off
-  default: Off
+  default: Required
 - name: RunConfig3
   displayName: Run RunConfig3
   type: string
   values:
     - Required
     - Off
-  default: Off
+  default: Required
 - name: RunConfig4
   displayName: Run RunConfig4
   type: string
   values:
     - Required
     - Off
-  default: Off
+  default: Required
 - name: RunConfig5
   displayName: Run RunConfig5
   type: string
   values:
     - Required
     - Off
-  default: Off
+  default: Required
  
 trigger:
   branches:
