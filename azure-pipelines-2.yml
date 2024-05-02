@@ -1,3 +1,19 @@
+
+ 
+trigger:
+      - main
+ 
+pool:
+  name : Default
+
+variables:
+  system.debug: true
+ 
+stages:
+- stage: RunPythonScripts
+  displayName: RunPythonScripts
+  jobs:
+  - job: RunPythonScripts
 parameters:
 - name: RunPythonScripts
   displayName: Run RunPythonScripts
@@ -41,24 +57,8 @@ parameters:
     - Required
     - Off
   default: Off
- 
-trigger:
-      - main
- 
-pool:
-  name : Default
-
-variables:
-  system.debug: true
- 
-stages:
-- stage: RunPythonScripts
-  displayName: RunPythonScripts
-  jobs:
-  - job: RunPythonScripts
-    pool:
-      Default
-    steps:
+    
+  steps:
  
     # Run initial_file.py with specified arguments
     - script: |
