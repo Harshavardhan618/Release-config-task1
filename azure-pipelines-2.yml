@@ -51,54 +51,39 @@ pool:
   name: Default
 
 variables:
-  system.debug: true
+  system.debug: true 
 
 stages:
 - stage: RunPythonScripts
   displayName: RunPythonScripts
   jobs:
   - job: RunPythonScripts
+ 
     steps:
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py
 
-  - job: RunConfig1
-    dependsOn: RunPythonScripts
-    steps:
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_1
       displayName: 'Execute PythonScript in Config_1'
       condition: eq('${{ parameters.RunConfig1 }}', 'Required')
       
-  - job: RunConfig2
-
-    steps:
+ 
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_2
       displayName: 'Execute PythonScript in Config_2'
       condition: eq('${{ parameters.RunConfig2 }}', 'Required')
 
-  - job: RunConfig3
-    dependsOn: 
-    steps:
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_3
       displayName: 'Execute PythonScript in Config_3'
       condition: eq('${{ parameters.RunConfig3 }}', 'Required')
-
-  - job: RunConfig4
-    dependsOn: RunConfig1
-    condition: succeeded('RunConfig1')
-    steps:
+ 
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_4
       displayName: 'Execute PythonScript in Config_4'
       condition: eq('${{ parameters.RunConfig4 }}', 'Required')
-
-  - job: RunConfig5
-    dependsOn: RunConfig3
-    condition: succeeded('RunConfig3')
-    steps:
+ 
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_5
       displayName: 'Execute PythonScript in Config_5'
