@@ -43,10 +43,12 @@ parameters:
   default: Off
  
 trigger:
+  branches:
+    include:
       - main
 
 pool:
-  name : Default
+  name: Default
 
 variables:
   system.debug: true
@@ -59,12 +61,9 @@ stages:
     pool:
       Default
     steps:
- 
-    # Run initial_file.py with specified arguments
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py
         
- 
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_1
       displayName: 'Execute PythonScript in Config_1'
@@ -74,6 +73,7 @@ stages:
         python RELEASE_CONFIGURATIONS/initial_file.py Config_2
       displayName: 'Execute PythonScript in Config_2'
       condition: eq('${{ parameters.RunConfig2 }}', 'Required')
+
     - script: |
         python RELEASE_CONFIGURATIONS/initial_file.py Config_3
       displayName: 'Execute PythonScript in Config_3'
@@ -88,5 +88,4 @@ stages:
         python RELEASE_CONFIGURATIONS/initial_file.py Config_5
       displayName: 'Execute PythonScript in Config_5'
       condition: eq('${{ parameters.RunConfig5 }}', 'Required')
-
 
