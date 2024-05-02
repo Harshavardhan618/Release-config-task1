@@ -36,7 +36,7 @@ steps:
 
 - script: |
     echo "Contents of the file:"
-    cat C:/agent1/_work/3/s/Config_1.txt
+    Get-Content C:/agent1/_work/3/s/Config_1.txt
 
 
 
