@@ -55,7 +55,7 @@ variables:
 stages:
 - stage: RunPythonScripts
   displayName: RunPythonScripts
-  condition: and(eq('${{ parameters.RunConfig1 }}', 'Required'), eq('${{ parameters.RunConfig2 }}', 'required'), eq('${{ parameters.RunConfig3 }}', 'required'), eq('${{ parameters.RunConfig4 }}', 'required'), eq('${{ parameters.RunConfig5 }}', 'required') )
+  condition: eq('${{ parameters.RunConfig2 }}', 'Required')
   
   jobs:
   - job: RunPythonScripts
