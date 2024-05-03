@@ -49,8 +49,7 @@ parameters:
   displayName: Pool image 
   type: string
   default: Az-Harsh
-  values:
-  - Az-Harsh
+
  
 
 trigger:
