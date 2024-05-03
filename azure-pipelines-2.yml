@@ -46,7 +46,7 @@ parameters:
   default: Off
 
 - name: image
-  displayName: Pool Image
+  displayName: Pool Name 
   type: string
   default: Default
   values:
