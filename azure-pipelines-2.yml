@@ -51,7 +51,6 @@ parameters:
   default: Default
   values:
   - Default
-  - Az-Harsh
   - My agent
 
 
