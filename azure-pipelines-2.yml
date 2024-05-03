@@ -53,11 +53,7 @@ parameters:
   - Default
   - vanashri_pool
   - Az-Harsh
-
-
-
-
-   
+ 
 
 trigger:
   branches:
