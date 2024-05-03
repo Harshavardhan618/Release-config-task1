@@ -50,8 +50,6 @@ parameters:
   type: string
   default: Az-Harsh
   values:
-  - Default
-  - vanashri_pool
   - Az-Harsh
  
 
