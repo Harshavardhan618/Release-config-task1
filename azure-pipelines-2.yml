@@ -45,15 +45,26 @@ parameters:
     - Off
   default: Off
 
- 
+- name: image
+  displayName: Pool Image
+  type: string
+  default: ubuntu
+  values:
+  - ubuntu
+  - ubuntu-2
+  - testpool1
+  - local
+  - macOS-latest
+
+
+   
+
 trigger:
   branches:
     include:
       - main
 
-pool:
 
-  name: Default
 
 variables:
   system.debug: true 
