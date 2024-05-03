@@ -48,13 +48,12 @@ parameters:
 - name: image
   displayName: Pool Image
   type: string
-  default: ubuntu
+  default: Default
   values:
-  - ubuntu
-  - ubuntu-2
-  - testpool1
-  - local
-  - macOS-latest
+  - Default
+  - Az-Harsh
+  - My agent
+
 
 
    
