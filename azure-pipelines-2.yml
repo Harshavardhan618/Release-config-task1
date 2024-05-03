@@ -46,13 +46,14 @@ parameters:
   default: Off
 
 - name: image
-  displayName: Pool Name 
+  displayName: Pool image 
   type: string
   default: Az-Harsh
   values:
   - Default
   - My agent
   - Az-Harsh
+
 
 
 
